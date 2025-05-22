@@ -1,7 +1,13 @@
+import Sidebar from './components/PlaygroundSidebar';
+
 export default function Playground() {
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold text-blue-500">Playground</h1>
+    <div className="flex">
+      <Sidebar />
+      <main className="flex-grow p-6">
+        <h1 className="text-2xl font-bold mb-4">Playground</h1>
+        <p>This is where your experiments will live.</p>
+      </main>
     </div>
   );
 }

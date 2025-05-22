@@ -1,7 +1,11 @@
 export default function Home() {
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold text-blue-500">Welcome Home Alone</h1>
+      <section>
+        <div className="bg-blue-100 -mx-4 px-4 py-8">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio voluptatibus dolorum quas, soluta delectus saepe nihil magni, voluptate eius debitis neque! Et nihil repellat perspiciatis fugit hic sunt autem impedit.</p>
+        </div>
+      </section>
     </div>
   );
 }
