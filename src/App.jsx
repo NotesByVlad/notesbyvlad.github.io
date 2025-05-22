@@ -28,6 +28,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div className="p-6">
+        <p className="text-blue-500 font-bold">This text should be blue and bold (testing tailwind css).</p>
+      </div>
     </>
   )
 }
