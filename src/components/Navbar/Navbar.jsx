@@ -1,63 +1,41 @@
-import { Link, useLocation } from "react-router-dom";
+import NavLinks from "./components/NavLinks";
+import HamburgerButton from "./components/HamburgerButton";
+import { useState } from "react";
 
 export default function Navbar() {
-
-// useLocation hook to get the current URL path
-  const location = useLocation();
-
-// array of objects -> menu items
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Skills", path: "/skills" },
-    { name: "Projects", path: "/projects" },
-    { name: "Passions", path: "/passions" },
-    { name: "Playground", path: "/playground" },
-  ];
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md px-4 py-3 sticky top-0 z-50">
-      <ul className="flex gap-6 justify-center">
+    <nav className="w-full bg-white px-4 py-3 relative z-50">
+      <div className="flex items-center justify-between relative">
+        {/* Logo */}
+        <div className="text-xl font-bold z-10">NotesByVlad</div>
 
-        {/* goes over each nav item in the array and creates a li for each one */}
-        {navItems.map((item) => (
-          <li key={item.path}>
-            <Link
-              to={item.path}
-              className={`text-lg font-medium hover:text-blue-600 ${
-                location.pathname === item.path ? "text-blue-500" : "text-gray-700"
-              }`}
-            >
-              {item.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+        {/* NavLinks */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:block shadow px-4 py-1 z-0">
+          <NavLinks className="flex gap-6 items-center" />
+        </div>
+
+        {/* Hamburger */}
+        <div className="z-10 md:hidden">
+          <HamburgerButton onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
+        </div>
+      </div>
+
+
+      {/* Mobile dropdown */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-500 ${
+          isOpen ? "max-h-96 py-4" : "max-h-0 py-0"
+        }`}
+      >
+        <NavLinks
+          className={`flex flex-col items-center gap-3 bg-white transition-all duration-300 ease-in-out transform ${
+            isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+          }`}
+          onClick={() => setIsOpen(false)}
+        />
+      </div>
     </nav>
   );
 }
-
-// Tailwind:
-
-// <nav>
-//
-// bg-white: white background
-//
-// shadow-md: subtle shadow
-//
-// px-4 py-3: horizontal + vertical padding
-//
-// sticky top-0: stays at the top when scrolling
-//
-// z-50: ensures it stays on top of other elements (layering)
-//
-// </nav>
-
-//<ul>
-//
-//flex: horizontal layout
-//
-//gap-6: spacing between items
-//
-//justify-center: centers all links in the navbar
-//
-//</ul>
