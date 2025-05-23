@@ -6,13 +6,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white px-4 py-3 relative z-50">
+    <nav className="w-full px-4 py-3 relative z-50">
       <div className="flex items-center justify-between relative">
         {/* Logo */}
-        <div className="text-xl font-bold z-10">NotesByVlad</div>
+        <div className="text-xl text-text font-bold z-10">NotesByVlad</div>
 
         {/* NavLinks */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:block shadow px-4 py-1 z-0">
+        <div className="absolute left-1/2 bg-surface transform -translate-x-1/2 hidden md:block shadow px-4 py-1 z-0">
           <NavLinks className="flex gap-6 items-center" />
         </div>
 
@@ -30,7 +30,7 @@ export default function Navbar() {
         }`}
       >
         <NavLinks
-          className={`flex flex-col items-center gap-3 bg-white transition-all duration-300 ease-in-out transform ${
+          className={`flex flex-col items-center gap-3 bg-background transition-all duration-300 ease-in-out transform ${
             isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
           }`}
           onClick={() => setIsOpen(false)}

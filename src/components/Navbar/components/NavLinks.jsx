@@ -19,7 +19,7 @@ export default function NavLinks({ onClick, className }) {
           <Link
             to={item.path}
             onClick={onClick}
-            className={`text-lg font-medium hover:text-blue-600 ${
+            className={`text-lg text-text font-medium hover:text-blue-600 ${
               location.pathname === item.path ? "text-blue-500" : "text-gray-700"
             }`}
           >
