@@ -17,9 +17,27 @@ export default function ThemeSwitcher() {
     <div className="fixed bottom-20 left-4 inline-block text-left">
       <button
         onClick={() => setShowMenu(!showMenu)}
-        className="bg-button-bg text-text px-4 py-2 hover:bg-button-hover rounded shadow"
-      >
-        Theme
+        className="group bg-button-bg px-1 hover:bg-button-hover rounded shadow">
+        <svg 
+          viewBox="0 0 100 100" 
+          width="40" 
+          height="40" 
+          xmlns="http://www.w3.org/2000/svg">
+          {/* Palette shape: use text color for stroke and fill */}
+          <path 
+            d="M44.55 10.526C18.234 10.526 0 31.58 0 42.106s5.263 18.42 15.79 18.42c10.526 0 15.789 2.632 15.789 10.527
+              c0 10.526 7.895 18.42 18.421 18.42c34.21 0 50-18.42 50-36.841c0-31.58-23.87-42.106-55.45-42.106z"
+            className="fill-background group-hover:fill-text transition-colors duration-500"/>
+          {/* Paint dabs */}
+          <circle cx="10" cy="40" r="7" className="fill-green-500" />
+          <circle cx="25" cy="25" r="7" className="fill-red-500" />
+          <circle cx="45" cy="19" r="7" className="fill-orange-500" />
+          <circle cx="66" cy="23" r="7" className="fill-blue-300" />
+          <circle cx="85" cy="33" r="7" className="fill-black" />
+          <circle cx="90" cy="52" r="7" className="fill-white" />
+          {/* <!-- Thumb hole: background (surface), stroke (text) --> */}
+          <circle cx="49" cy="71" r="11" className="fill-button-bg"/>
+        </svg>
       </button>
 
       {showMenu && (
@@ -31,7 +49,7 @@ export default function ThemeSwitcher() {
                 setTheme(t);
                 setShowMenu(false);
               }}
-              className={`text-sm px-3 py-1 rounded hover:bg-button-hover ${
+              className={`text-sm px-3 py-1 rounded hover:bg-button-hover${
                 theme === t ? 'font-bold' : ''
               }`}
             >

@@ -18,7 +18,9 @@ export default function App() {
     
     return (
         <Router>
-            <div className="bg-background flex flex-col min-h-screen">
+            <div className="bg-background text-text transition-colors 
+                            duration-500 ease-in-out flex flex-col 
+                            min-h-screen">
                 <Navbar />
                 <main className="flex-grow">
                     <Routes>

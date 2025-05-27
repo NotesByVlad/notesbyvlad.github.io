@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className="w-full px-4 py-3 relative z-50">
       <div className="flex items-center justify-between relative">
         {/* Logo */}
-        <div className="text-xl text-text font-bold z-10">NotesByVlad</div>
+        <div className="text-xl font-bold z-10">NotesByVlad</div>
 
         {/* NavLinks */}
         <div className="absolute left-1/2 bg-surface transform -translate-x-1/2 hidden md:block shadow px-4 py-1 z-0">
