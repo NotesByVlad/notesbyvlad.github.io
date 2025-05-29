@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Job Title 1",
+        "description": "Description",
+        "responsibilities": "Responsibilities",
+        "achievements": "Achievements",
+        "developed_skills": "Developed Skills"
+    },
+    {
+        "title": "Job Title 2",
+        "description": "Description",
+        "responsibilities": "Responsibilities",
+        "achievements": "Achievements",
+        "developed_skills": "Developed Skills"
+    },
+    {
+        "title": "Job Title 3",
+        "description": "Description",
+        "responsibilities": "Responsibilities",
+        "achievements": "Achievements",
+        "developed_skills": "Developed Skills"
+    }
+]

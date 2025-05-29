@@ -1,17 +1,66 @@
-import passionsData from './data/passionsData.json';
+import { useState } from 'react'
+
+import Passions from './components/Passions'
+import Goals from './components/Goals'
+import Career from './components/Career'
+
+const tabs = ["Career", "Goals", "Passions"]
 
 export default function Path() {
+  const [activeTab, setActiveTab] = useState(null)
+
   return (
     
-    <div className="space-y-8 max-w-4xl mx-auto px-4">
-      {passionsData.map((item, index) => (
-        <section key={index}>
-          <div className="bg-surface -mx-4 px-4 py-8">
-            <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-            <p>{item.content}</p>
+    <div className="p-4 bg-surface rounded-xl shadow-md max-w-3xl mx-auto space-y-4">
+      {activeTab && (
+        <>
+          <div className="flex justify-center gap-2">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-4 py-2 rounded ${
+                activeTab === tab ? "bg-button-bg text-text" : "bg-background hover:bg-button-hover"
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+            <button
+              onClick={() => setActiveTab(null)}
+              className="text-sm text-red-500 hover:underline">
+                Back
+            </button>
+
+        <div className="pt-4">
+          {activeTab === "Passions" && <Passions />}
+          {activeTab === "Career" && <Career />}
+          {activeTab === "Goals" && <Goals />}
+        </div>
+        </>
+      )}
+      {!activeTab && (
+        <>
+          <div className="flex justify-center gap-2">
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className="px-4 py-2 rounded bg-background hover:bg-button-hover">
+                  {tab}
+              </button>
+            ))}
           </div>
-        </section>
-      ))}
+
+          <h1 className="text-2xl font-bold text-center">My Path</h1>
+          <p className="text-center">
+            Welcome to my personal journey. Click a section above to learn more about my passions, career path, or goals.
+          </p>
+
+        </>
+      )}
+      
     </div>
   );
 }
