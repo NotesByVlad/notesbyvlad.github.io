@@ -1,27 +1,44 @@
-export default function ProjectCard() {
-    return (
-        <div className="bg-surface shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300">
-            <h3 className="text-xl text-text font-bold text-gray-900 mb-2">Project</h3>
-            <p className="text-text mb-4">
-                Project Description
-            </p>
-            <p className="text-text mb-4">
-                Technologies used
-            </p>
-            <p className="text-text mb-4">
-                Some media here, images, videos, stuff
-            </p>
-            <p className="text-text mb-4">
-                Aprox Time Spent on Project
-            </p>
-            <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-blue-600 hover:underline"
-            >
-                View project
-            </a>
-        </div>
-    );
+export default function ProjectCard({
+  title,
+  description,
+  technologies,
+  features,
+  timeSpent,
+  repoLink,
+}) {
+  return (
+    <div className="bg-surface shadow-lg rounded-2xl p-6">
+      <h3 className="mb-2">{title}</h3>
+
+      <p className="mb-4">{description}</p>
+
+      <p className="mb-1">Technologies:</p>
+      <ul className="list-disc list-inside mb-4">
+        {technologies.map((tech, i) => (
+          <li key={i}>{tech}</li>
+        ))}
+      </ul>
+
+      <p className="mb-1">Features:</p>
+      <ul className="list-disc list-inside mb-4">
+        {features.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ul>
+
+      <p className="mb-1">Time Spent:</p>
+      <p className="mb-4">{timeSpent}</p>
+
+      {repoLink && (
+        <a
+          href={repoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block"
+        >
+          View on GitHub
+        </a>
+      )}
+    </div>
+  );
 }

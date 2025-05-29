@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Travel Agency Booking System",
+    "description": "A Django web app simulating a travel agency with dynamic pricing, hotel and flight options, booking management, and email authentication.",
+    "technologies": [
+      "Python 3.10",
+      "Django 4.1",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SQLite"
+    ],
+    "features": [
+      "Admin dashboard",
+      "User booking interface",
+      "Invoice & booking history"
+    ],
+    "timeSpent": "~2 months (final project + improvements)",
+    "repoLink": "https://github.com/NotesByVlad/django_travel_agency"
+  }
+]
