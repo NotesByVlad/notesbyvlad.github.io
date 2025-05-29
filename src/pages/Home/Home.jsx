@@ -4,7 +4,13 @@ import PlaygroundPreview from "./components/PlaygroundPreview";
 import ProjectsPreview from "./components/ProjectsPreview";
 import SkillsPreview from "./components/SkillsPreview";
 
+import { useEffect } from "react";
+
 export default function Home() {
+  useEffect(() => {
+    window.alert("Site under construction. I'm working on something awesome!");
+  }, []);
+
   return (
     <div className="p-4">
       <section>
