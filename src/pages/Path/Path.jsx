@@ -1,7 +1,8 @@
 import passionsData from './data/passionsData.json';
 
-export default function Passions() {
+export default function Path() {
   return (
+    
     <div className="space-y-8 max-w-4xl mx-auto px-4">
       {passionsData.map((item, index) => (
         <section key={index}>

@@ -10,7 +10,7 @@ import ThemeSwitcher from "./components/ThemeSwitcher/ThemeSwitcher";
 import Home from "./pages/Home/Home";
 import Skills from "./pages/Skills/Skills";
 import Projects from "./pages/Projects/Projects";
-import Passions from "./pages/Passions/Passions";
+import Path from "./pages/Path/Path";
 import Playground from "./pages/Playground/Playground";
 
 
@@ -27,7 +27,7 @@ export default function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/projects" element={<Projects />} />
                         <Route path="/skills" element={<Skills />} />
-                        <Route path="/passions" element={<Passions />} />
+                        <Route path="/path" element={<Path />} />
                         <Route path="/playground" element={<Playground />} />
                     </Routes>
                 </main>
