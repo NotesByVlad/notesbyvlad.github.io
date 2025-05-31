@@ -1,4 +1,3 @@
-// src/components/NavLinks.jsx
 import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
@@ -19,8 +18,8 @@ export default function NavLinks({ onClick, className }) {
           <Link
             to={item.path}
             onClick={onClick}
-            className={`text-lg font-medium hover:text-blue-600 ${
-              location.pathname === item.path ? "text-red-500" : ""
+            className={`hover:text-link-hover p-2 ${
+              location.pathname === item.path ? "text-link-active" : ""
             }`}
           >
             {item.name}

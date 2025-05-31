@@ -9,10 +9,10 @@ export default function Navbar() {
     <nav className="w-full px-4 py-3 relative z-50">
       <div className="flex items-center justify-between relative">
         {/* Logo */}
-        <div className="text-xl font-bold z-10">NotesByVlad</div>
+        <div className="text-4xl text-link-active font-bold z-10">NotesByVlad</div>
 
         {/* NavLinks */}
-        <div className="absolute left-1/2 bg-surface transform -translate-x-1/2 hidden md:block shadow px-4 py-1 z-0">
+        <div className="text-xl transform hidden md:block py-1 z-0">
           <NavLinks className="flex gap-6 items-center" />
         </div>
 
@@ -25,14 +25,19 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ${
-          isOpen ? "max-h-96 py-4" : "max-h-0 py-0"
+        className={`md:hidden fixed inset-0 bg-background transition-all duration-500 ${
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
         <NavLinks
-          className={`flex flex-col items-center gap-3 bg-background transition-all duration-300 ease-in-out transform ${
-            isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
-          }`}
+          className={`
+            flex flex-col items-center justify-center h-full gap-6
+            text-base
+            [@media(min-width:400px)]:text-4xl
+            [@media(max-width:340px)]:text-2xl
+            transition-all duration-300 ease-in-out transform
+            ${isOpen ? "translate-y-0" : "-translate-y-4"}
+          `}
           onClick={() => setIsOpen(false)}
         />
       </div>
