@@ -5,15 +5,22 @@
 @layer base {
     :root {
         /* Base Colors */
-        --color-background: #ffffff;
+        --color-background: #FFFAEC;
         --color-text: #262626;
 
+        /* Navbar links */
+        --color-link-active: #BDB395;
+        --color-link-hover: #578E7E;
+
         /* UI Containers -> sidebars, cards, section containers */
-        --color-surface: #f9fafb;
+        --color-surface: #F5ECD5;
+
+        /* BoxShadow */
+        --shadow-theme: #3D3D3D;
 
         /* Button */
-        --color-button-bg: #3b82f6;
-        --color-button-hover: #2563eb;
+        --color-button-bg: #BDB395;
+        --color-button-hover: #578E7E;
 
         /* Secondary Button */
         --color-button-secondary-bg: #f3f4f6;
@@ -26,22 +33,29 @@
 
     [data-theme="dark"] {
         /* Base Colors */
-        --color-background: #0d0d0d;
+        --color-background: #000000;
         --color-text: #f5f5f5;
 
+        /* Links */
+        --color-link-active: #169976;
+        --color-link-hover: #1DCD9F;
+
         /* UI Containers -> sidebars, cards, section containers */
-        --color-surface: #1a1a1a;
+        --color-surface: #222222;
+
+        /* BoxShadow */
+        --shadow-theme: #169976;
 
         /* Button */
-        --color-button-bg: #3b82f6;
-        --color-button-hover: #2563eb;
+        --color-button-bg: #169976;
+        --color-button-hover: #1DCD9F;
 
         /* Secondary Button */
         --color-button-secondary-bg: #2e2e2e;
         --color-button-secondary-hover: #3a3a3a;
 
         /* Borders */
-        --color-border: #ffffff;
+        --color-border: #169976;
     }
 
     [data-theme="forest"] {
@@ -49,8 +63,15 @@
         --color-background: #0c1f1a;
         --color-text: #e6f4ea;
 
+        /* Navbar links */
+        --color-link-active: #fc0313;
+        --color-link-hover: #03fce3;
+
         /* UI Containers -> sidebars, cards, section containers */
         --color-surface: #133329;
+
+        /* BoxShadow */
+        --shadow-theme: #169976;
 
         /* Button */
         --color-button-bg: #0f5132;
