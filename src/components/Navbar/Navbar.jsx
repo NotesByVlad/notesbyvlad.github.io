@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className="w-full px-4 py-3 relative z-50">
       <div className="flex items-center justify-between relative">
         {/* Logo */}
-        <div className="text-4xl text-link-active font-bold z-10">NotesByVlad</div>
+        <div className="text-4xl text-primaryColor font-bold z-10">NotesByVlad</div>
 
         {/* NavLinks */}
         <div className="text-xl transform hidden md:block py-1 z-0">
@@ -25,7 +25,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       <div
-        className={`md:hidden fixed inset-0 bg-background transition-all duration-500 ${
+        className={`md:hidden fixed inset-0 bg-backgroundColor transition-all duration-500 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -36,7 +36,7 @@ export default function Navbar() {
             [@media(min-width:400px)]:text-4xl
             [@media(max-width:340px)]:text-2xl
             transition-all duration-300 ease-in-out transform
-            ${isOpen ? "translate-y-0" : "-translate-y-4"}
+            ${isOpen ? "translate-y-0" : "-translate-y-96"}
           `}
           onClick={() => setIsOpen(false)}
         />

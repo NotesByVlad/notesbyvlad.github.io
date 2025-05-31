@@ -4,84 +4,38 @@
 
 @layer base {
     :root {
-        /* Base Colors */
+        /* Background Color */
         --color-background: #FFFAEC;
+        /* Text Color */
         --color-text: #262626;
-
-        /* Navbar links */
-        --color-link-active: #BDB395;
-        --color-link-hover: #578E7E;
-
         /* UI Containers -> sidebars, cards, section containers */
         --color-surface: #F5ECD5;
-
-        /* BoxShadow */
-        --shadow-theme: #3D3D3D;
-
-        /* Button */
-        --color-button-bg: #BDB395;
-        --color-button-hover: #578E7E;
-
-        /* Secondary Button */
-        --color-button-secondary-bg: #f3f4f6;
-        --color-button-secondary-hover: #e5e7eb;
-
-        /* Borders */
-        --color-border: #d1d5db;
-
+        /* Main Colors */
+        --color-primary: #BDB395;
+        --color-secondary: #c97514;
     }
 
     [data-theme="dark"] {
-        /* Base Colors */
+        /* Background Color */
         --color-background: #000000;
+        /* Text Color */
         --color-text: #f5f5f5;
-
-        /* Links */
-        --color-link-active: #169976;
-        --color-link-hover: #1DCD9F;
-
         /* UI Containers -> sidebars, cards, section containers */
         --color-surface: #222222;
-
-        /* BoxShadow */
-        --shadow-theme: #169976;
-
-        /* Button */
-        --color-button-bg: #169976;
-        --color-button-hover: #1DCD9F;
-
-        /* Secondary Button */
-        --color-button-secondary-bg: #2e2e2e;
-        --color-button-secondary-hover: #3a3a3a;
-
-        /* Borders */
-        --color-border: #169976;
+        /* Main Colors */
+        --color-primary: #34aec9;
+        --color-secondary: #954ae0;
     }
 
     [data-theme="forest"] {
-        /* Base Colors */
+        /* Background Color */
         --color-background: #0c1f1a;
+        /* Text Color */
         --color-text: #e6f4ea;
-
-        /* Navbar links */
-        --color-link-active: #fc0313;
-        --color-link-hover: #03fce3;
-
         /* UI Containers -> sidebars, cards, section containers */
         --color-surface: #133329;
-
-        /* BoxShadow */
-        --shadow-theme: #169976;
-
-        /* Button */
-        --color-button-bg: #0f5132;
-        --color-button-hover: #0b3c24;
-
-        /* Secondary Button */
-        --color-button-secondary-bg: #1c3329;
-        --color-button-secondary-hover: #264237;
-
-        /* Borders */
-        --color-border: #355e4c;
+        /* Main Colors */
+        --color-primary: #bdb940;
+        --color-secondary: #71ad45;
     }
 }

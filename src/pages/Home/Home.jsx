@@ -7,15 +7,14 @@ import SkillsPreview from "./components/SkillsPreview";
 import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    window.alert("Site under construction. I'm working on something awesome!");
-  }, []);
+  // useEffect(() => {
+  //   window.alert("Site under construction. I'm working on something awesome!");
+  // }, []);
 
   return (
     <div className="p-4">
       <section>
         <div className="space-y-8 max-w-4xl mx-auto px-4">
-        <h1 className="text-2xl font-bold mb-2">Welcome to my website</h1>
           <Hero />
           <SkillsPreview />
           <ProjectsPreview />

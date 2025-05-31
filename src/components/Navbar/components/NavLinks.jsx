@@ -18,10 +18,9 @@ export default function NavLinks({ onClick, className }) {
           <Link
             to={item.path}
             onClick={onClick}
-            className={`hover:text-link-hover p-2 ${
-              location.pathname === item.path ? "text-link-active" : ""
-            }`}
-          >
+            className={`p-2 
+              ${location.pathname === item.path ? "text-primaryColor" : "hover:text-secondaryColor"
+            }`}>
             {item.name}
           </Link>
         </li>

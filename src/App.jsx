@@ -18,7 +18,7 @@ export default function App() {
     
     return (
         <Router>
-            <div className="bg-background text-text transition-colors 
+            <div className="bg-backgroundColor text-textColor transition-colors 
                             duration-500 ease-in-out flex flex-col 
                             min-h-screen">
                 <Navbar />

@@ -3,8 +3,8 @@ import ProjectPreviewCard from "./ProjectsPreviewCard";
 
 export default function ProjectsPreview() {
   return (
-    <section className="p-4 bg-surface rounded flex flex-col gap-4">
-      <h2 className="text-xl font-bold mb-2">Projects</h2>
+    <section className="p-4 bg-surface rounded flex flex-col gap-4 shadow-themeShadow">
+      <h2 className="text-xl text-primaryColor font-bold mb-2">Projects</h2>
 
       <div>
         {projectData.map((project, i) =>(
@@ -16,8 +16,7 @@ export default function ProjectsPreview() {
       </div>
 
       <p>
-        For more detail, visit the
-        <a href="/projects" className="text-blue-500 underline"> Projects page</a>.
+        For more detail, visit the <a href="/projects" className="text-secondaryColor underline">Projects page</a>.
       </p>
     </section>
   );

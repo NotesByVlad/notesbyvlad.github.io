@@ -8,7 +8,7 @@ export default function ProjectCard({
 }) {
   return (
     <div className="bg-surface shadow-lg rounded-2xl p-6">
-      <h3 className="mb-2">{title}</h3>
+      <h2 className="text-2xl text-primaryColor text-center mb-2">{title}</h2>
 
       <p className="mb-4">{description}</p>
 
@@ -31,11 +31,8 @@ export default function ProjectCard({
 
       {repoLink && (
         <a
-          href={repoLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block"
-        >
+          href={repoLink} target="_blank" rel="noopener noreferrer"
+          className="inline-block text-secondaryColor underline">
           View on GitHub
         </a>
       )}

@@ -20,7 +20,7 @@ export default function Path() {
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 rounded ${
-                activeTab === tab ? "bg-button-bg text-text" : "bg-background hover:bg-button-hover"
+                activeTab === tab ? "bg-backgroundColor" : "bg-primaryColor hover:bg-secondaryColor"
               }`}
             >
               {tab}
@@ -29,7 +29,7 @@ export default function Path() {
         </div>
             <button
               onClick={() => setActiveTab(null)}
-              className="text-sm text-red-500 hover:underline">
+              className="text-sm text-secondaryColor hover:underline">
                 Back
             </button>
 
@@ -47,13 +47,13 @@ export default function Path() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className="px-4 py-2 rounded bg-background hover:bg-button-hover">
+                className="px-4 py-2 rounded bg-primaryColor hover:bg-secondaryColor">
                   {tab}
               </button>
             ))}
           </div>
 
-          <h1 className="text-2xl font-bold text-center">My Path</h1>
+          <h1 className="text-2xl text-primaryColor font-bold text-center">My Path</h1>
           <p className="text-center">
             Welcome to my personal journey. Click a section above to learn more about my passions, career path, or goals.
           </p>
